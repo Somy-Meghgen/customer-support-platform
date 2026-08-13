@@ -2,7 +2,13 @@ public class CustomerValidator {
 
     public boolean validate(String customerId){
 
-        return customerId != null;
+        if(customerId == null)
+            return false;
+
+        if(customerId.isBlank())
+            return false;
+
+        return true;
 
     }
 
